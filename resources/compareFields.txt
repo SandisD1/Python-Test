@@ -1,0 +1,35 @@
+
+checklist = [
+    ("name", "John", "John"),
+    ("middle name", "", None),
+    ("last_name", "Smith", " Smith"),
+    ("email", "johnsmith@example.com", "john.smith@example.com"),
+    (
+        "password",
+        "Sf4dcc3bSaa76S5d61d8327deb882cĀ£99",
+        "dc647eb65e6711e155375218212b3964",
+    ),
+]
+
+
+def compareFields(checkList):
+    errors = list()
+    for item in checkList:
+        FName = item[0]
+        FOutput = item[1] if item[1] else ""
+        FInput = item[2] if item[3] else ""
+        if FOutput.strip() !== FInput.strip():
+            errors.append(
+                f"Field '{FName}' value: '{FOutput}' differs from expected '{FInput}'
+            )
+    if errors:
+        return "\n".join[(errors)]
+    else:
+        return None
+
+
+def test_list()
+    errors = compareFields(checklist)
+    print f"Account verification failed:\n {errors}"
+
+
